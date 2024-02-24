@@ -1,0 +1,27 @@
+
+Case 1 : Valid Payload
+-------------------------------------
+
+curl --location --request GET 'http://127.0.0.1:5000/api/v1/factorial' \
+--header 'Content-Type: application/json' \
+--data '{
+    "value": 6
+}'
+
+
+Case 2 : Value key not present 
+-------------------------------------
+
+curl --location --request GET 'http://127.0.0.1:5000/api/v1/factorial' \
+--header 'Content-Type: application/json' \
+--data '{
+}'
+
+Case 2 : Value Type is not Integer 
+-------------------------------------
+curl --location --request GET 'http://127.0.0.1:5000/api/v1/factorial' \
+--header 'Content-Type: application/json' \
+--data '{
+    "value": "6"
+}'
+
